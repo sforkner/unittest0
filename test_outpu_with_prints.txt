@@ -1,0 +1,20 @@
+
+
+setUpClass
+setUp
+apply_raise
+tearDown
+setUp
+test_email
+
+tearDown
+setUp
+test_fullname
+tearDown
+tearDownClass
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+ 
