@@ -11,10 +11,13 @@ tearDown
 setUp
 test_fullname
 tearDown
+setUp
+monthly_schedule
+tearDown
 tearDownClass
-...
+....
 ----------------------------------------------------------------------
-Ran 3 tests in 0.000s
+Ran 4 tests in 0.001s
 
 OK
  
