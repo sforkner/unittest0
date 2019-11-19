@@ -4,16 +4,17 @@ from employee import Employee
 
 
 class TestEmployee(unittest.TestCase):
+    """ unit tests for Employee classs defined in employee.py """
 
     # classmethod run once at start/end of tests
     @classmethod
     def setUpClass(cls):
-        """ code to run once before test goes here"""
+        """ code to run once before start of tests goes here"""
         print('setUpClass')
 
     @classmethod
     def tearDownClass(cls):
-        """ code to run once after all test completed goes here"""
+        """ code to run once after all tests completed goes here"""
         print('tearDownClass')
 
     # instance methods setUp and tearDown run before/after each test
@@ -26,6 +27,7 @@ class TestEmployee(unittest.TestCase):
     def tearDown(self):
         print('tearDown')
 
+    # tests of Employee class email
     def test_email(self):
         print('test_email')
         self.assertEqual(self.emp_1.email, 'Corey.Schafer@email.com')
@@ -37,6 +39,7 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_1.email, 'John.Schafer@email.com')
         self.assertEqual(self.emp_2.email, 'Jane.Smith@email.com')
 
+    # tests of Employee class fullname
     def test_fullname(self):
         print('test_fullname')
         self.assertEqual(self.emp_1.fullname, 'Corey Schafer')
@@ -48,6 +51,7 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_1.fullname, 'John Schafer')
         self.assertEqual(self.emp_2.fullname, 'Jane Smith')
 
+    # tests of Employee class apply_raise
     def test_apply_raise(self):
         print('apply_raise')
         self.emp_1.apply_raise()
@@ -56,6 +60,7 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_1.pay, 52500)
         self.assertEqual(self.emp_2.pay, 63000)
 
+    # test of Employee class monthly_schedule
     def test_monthly_schedule(self):
         print('monthly_schedule')
         with patch('employee.requests.get') as mocked_get:
